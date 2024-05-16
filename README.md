@@ -108,11 +108,6 @@ This is a simple stock monitoring application that allows users to create watchl
 
 This application can be deployed to platforms like Heroku (for backend) and Netlify (for frontend) for production use. Ensure to set appropriate environment variables and update configuration settings for deployment.
 
-## Contributors
-
-- John Doe
-- Jane Smith
-
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
