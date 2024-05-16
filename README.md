@@ -1,46 +1,119 @@
-# Getting Started with Create React App
+# Stock Monitoring Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple stock monitoring application that allows users to create watchlists of stock symbols and view the latest stock prices using real-time data from the Alpha Vantage API. The application consists of a frontend built with React and a backend built with Django, providing a full-stack solution for stock monitoring.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **User Authentication**:
+  - Users can log in securely to access their personalized dashboard.
+  - Simple authentication mechanism implemented using Django sessions.
 
-### `npm start`
+- **Dashboard**:
+  - Displays the latest stock prices of symbols on the user's watchlist.
+  - Provides a visually intuitive interface with stock cards showing symbol, price, and stock graph (placeholder).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Watchlist Management**:
+  - Users can add or remove stock symbols from their watchlist.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Integration with Alpha Vantage API**:
+  - Fetches real-time stock data using the Alpha Vantage API (TIME_SERIES_INTRADAY endpoint).
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Frontend**:
+  - React
+  - TypeScript
+  - Material-UI
 
-### `npm run build`
+- **Backend**:
+  - Django
+  - Django REST Framework
+  - PostgreSQL (or your preferred database)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation and Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js (v14 or later)
+- Python (v3.8 or later)
+- PostgreSQL (or MySQL/MongoDB as preferred database)
 
-### `npm run eject`
+### Backend Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Clone the repository:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   git clone https://github.com/your-username/stock-monitoring.git
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2. Navigate to the backend directory:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+   ```bash
+   cd stock-monitoring/backend
+   ```
 
-## Learn More
+3. Install Python dependencies:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Set up the database (assuming PostgreSQL):
+
+   - Create a new database in PostgreSQL.
+   - Update the database settings in `backend/settings.py`.
+
+5. Apply migrations to create database tables:
+
+   ```bash
+   python manage.py migrate
+   ```
+
+6. Start the Django development server:
+
+   ```bash
+   python manage.py runserver
+   ```
+
+### Frontend Setup
+
+1. Open a new terminal and navigate to the frontend directory:
+
+   ```bash
+   cd stock-monitoring/frontend
+   ```
+
+2. Install Node.js dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the React development server:
+
+   ```bash
+   npm start
+   ```
+
+4. Access the application in your web browser at `http://localhost:3000`.
+
+## Usage
+
+- Open the application in your web browser.
+- Log in with your username/email and password.
+- View and manage your watchlist on the dashboard.
+- Logout when done using the application.
+
+## Deployment
+
+This application can be deployed to platforms like Heroku (for backend) and Netlify (for frontend) for production use. Ensure to set appropriate environment variables and update configuration settings for deployment.
+
+## Contributors
+
+- John Doe
+- Jane Smith
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
